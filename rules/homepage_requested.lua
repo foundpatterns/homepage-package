@@ -6,6 +6,4 @@ request.method == "GET"
 and
 #request.path_segments == 0
 and
-request.host == "supportreon.com"
-and
 count_pairs(request.query) == 0
