@@ -18,7 +18,7 @@ end)
 
 local homepage = render("index.html", {
   SITE_URL = "/",
-  SITENAME = torchbear.settings.site-name,
+  SITENAME = torchbear.settings.sitename,
   articles = {},
   slides = slides,
 })
