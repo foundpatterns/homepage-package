@@ -2,7 +2,7 @@ event: ["homepage_requested"]
 priority: 1
 input_parameters: ["request"]
 
-local slideshow_id = "56d2cd3e-5357-455d-9cd4-94aa0191db8e"
+local slideshow_id = "c800a360-d198-4a87-877e-b353f7dd0a9d"
 local slideshow_fields = content.read_document(slideshow_id)
 
 local slides = {}
