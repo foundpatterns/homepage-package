@@ -1,6 +1,6 @@
-event: ["about_requested"]
-priority: 1
-input_parameters: ["request"]
+event = ["about_requested"]
+priority = 1
+input_parameters = ["request"]
 
 local about = fs.read_file("about.md")
 

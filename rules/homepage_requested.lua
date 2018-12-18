@@ -1,6 +1,6 @@
-priority: 1
-input_parameter: "request"
-events_table: ["homepage_requested"]
+priority = 1
+input_parameter = "request"
+events_table = ["homepage_requested"]
 
 request.method == "GET"
 and

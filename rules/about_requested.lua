@@ -1,6 +1,6 @@
-priority: 1
-input_parameter: "request"
-events_table: ["about_requested"]
+priority = 1
+input_parameter = "request"
+events_table = ["about_requested"]
 
 request.method == "GET"
 and
