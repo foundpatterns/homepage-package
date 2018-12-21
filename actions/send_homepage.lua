@@ -1,6 +1,6 @@
-event: ["homepage_requested"]
-priority: 1
-input_parameters: ["request"]
+event = ["homepage_requested"]
+priority = 1
+input_parameters = ["request"]
 
 local slideshow_id = torchbear.settings.slideshow
 local slideshow_fields = content.read_document(slideshow_id)
