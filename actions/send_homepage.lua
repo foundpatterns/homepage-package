@@ -10,7 +10,7 @@ local slide_weights = {}
 content.walk_documents(nil, function (slide_id, fields, body)
   if fields.model == "slide" and fields.slideshow == slideshow_id then
     table.insert(slide_weights, {
-      content = render("homepage-slide.html", {
+      content = render(torchbear.settings.theme .. "/homepage-slide.html", {
         img = fields["image-address"],
         title = fields.title,
         body = body,
@@ -23,7 +23,7 @@ end)
 table.sort(slide_weights, function (a, b) return a.weight < b.weight end)
 local slides = map(slide_weights, function (it) return it.content end)
 
-local homepage = render("index.html", {
+local homepage = render(torchbear.settings.theme .. "/index.html", {
   SITE_URL = "/",
   SITENAME = torchbear.settings.sitename,
   articles = {},
