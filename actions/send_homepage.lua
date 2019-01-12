@@ -10,8 +10,7 @@ local slide_weights = {}
 content.walk_documents(nil, function (slide_id, fields, body)
   if fields.model == "slide" and fields.slideshow == slideshow_id then
     table.insert(slide_weights, {
-      -- content = render(torchbear.settings.theme .. "/homepage-slide.html", {
-      content = render("slideshow-template-theme/homepage-slide.html", {
+      content = render(torchbear.settings.theme .. "/homepage-slide.html", {
         img = fields["image-address"],
         title = fields.title,
         body = body,
