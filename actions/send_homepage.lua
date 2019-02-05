@@ -3,11 +3,11 @@ priority = 1
 input_parameters = ["request"]
 
 local slideshow_id = torchbear.settings.slideshow
-local slideshow_fields = content.read_document(slideshow_id)
+local slideshow_fields = contentdb.read_document(slideshow_id)
 
 local slide_weights = {}
 
-content.walk_documents(nil, function (slide_id, fields, body)
+contentdb.walk_documents(nil, function (slide_id, fields, body)
   if fields.model == "slide" and fields.slideshow == slideshow_id then
     table.insert(slide_weights, {
       content = render(torchbear.settings.theme .. "/homepage-slide.html", {
