@@ -1,16 +1,16 @@
-event: ["homepage_requested"]
-priority: 1
-input_parameters: ["request"]
+event = ["homepage_requested"]
+priority = 1
+input_parameters = ["request"]
 
 local slideshow_id = settings.slideshow
-local slideshow_fields = content.read_document(slideshow_id)
+local slideshow_fields = contentdb.read_document(slideshow_id)
 
 local slide_weights = {}
 
-content.walk_documents(nil, function (slide_id, fields, body)
+contentdb.walk_documents(nil, function (slide_id, fields, body)
   if fields.model == "slide" and fields.slideshow == slideshow_id then
     table.insert(slide_weights, {
-      content = render("homepage-slide.html", {
+      content = render(torchbear.settings.theme .. "/homepage-slide.html", {
         img = fields["image-address"],
         title = fields.title,
         body = body,
