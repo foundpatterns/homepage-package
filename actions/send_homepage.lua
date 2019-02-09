@@ -2,7 +2,7 @@ event: ["homepage_requested"]
 priority: 1
 input_parameters: ["request"]
 
-local slideshow_id = torchbear.settings.slideshow
+local slideshow_id = settings.slideshow
 local slideshow_fields = content.read_document(slideshow_id)
 
 local slide_weights = {}
@@ -25,7 +25,7 @@ local slides = map(slide_weights, function (it) return it.content end)
 
 local homepage = render("index.html", {
   SITE_URL = "/",
-  SITENAME = torchbear.settings.sitename,
+  SITENAME = settings.sitename,
   articles = {},
   slides = slides,
 })
